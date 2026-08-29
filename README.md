@@ -47,3 +47,17 @@ Then open `http://localhost:8000` in your browser.
 ## Prototype disclaimer
 
 The included records are sample/demo data for interface testing. They should not be treated as the definitive aSAH instrument inventory or as COS endorsements.
+
+
+## Adding instrument images
+
+This version supports an optional image in each instrument pop-up.
+
+1. Add your image file to the `images/` folder. PNG, JPG/JPEG, WebP, and SVG all work in modern browsers.
+2. In `data/instruments.csv`, enter the relative file path in the `image` column, for example: `images/moca.png`.
+3. Add accessible alternative text in `image_alt`, for example: `Illustration showing the major cognitive domains assessed by the MoCA.`
+4. If an instrument does not have an image, leave both fields blank. The pop-up will automatically omit the image area.
+
+The first sample record points to `images/example-instrument-graphic.svg` so you can see the feature working after deployment. Replace or remove that placeholder before using the resource publicly.
+
+Use only images that you have permission to publish. Original explanatory graphics created by your team are preferable to reproductions of copyrighted instrument forms or publication figures.
