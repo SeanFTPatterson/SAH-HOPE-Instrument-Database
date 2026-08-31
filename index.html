@@ -9,46 +9,62 @@
     --bg:#f7f8fa; --card:#ffffff; --ink:#1f2937; --muted:#667085; --line:#e5e7eb;
     --accent:#244a63; --accent2:#eaf1f5; --ok:#e8f5ee; --warn:#fff6dd; --info:#edf4ff;
   }
-  *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
-  header{background:linear-gradient(135deg,#17364a,#315f78);color:#fff;padding:42px 20px 34px}
-  .wrap{max-width:1180px;margin:0 auto}.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin-bottom:8px}
-  h1{margin:0 0 10px;font-size:34px;line-height:1.15}.subtitle{max-width:820px;font-size:17px;line-height:1.55;opacity:.95}
-  main{padding:28px 20px 60px}.notice{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 18px;border-radius:10px;margin-bottom:18px;line-height:1.5}
-  .toolbar{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:12px;background:var(--card);border:1px solid var(--line);padding:16px;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
-  label{font-size:12px;font-weight:700;color:var(--muted);display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em} input,select{width:100%;padding:11px 12px;border:1px solid #d0d5dd;border-radius:8px;background:#fff;font-size:14px;color:var(--ink)}
-  .meta{display:flex;justify-content:space-between;align-items:center;margin:18px 2px 10px;color:var(--muted);font-size:14px}.meta strong{color:var(--ink)}
-  .table-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}.table-wrap{overflow-x:auto} table{width:100%;border-collapse:collapse;min-width:900px} th,td{padding:14px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top} th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:#fafafa} td{font-size:14px;line-height:1.4}
-  tr.instrument-row{cursor:pointer} tr.instrument-row:hover{background:#fbfcfd}.name{font-weight:700;color:var(--accent)} .acronym{color:var(--muted);font-weight:500}
-  .badge{display:inline-block;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:700}.b-retained{background:var(--ok);color:#23613b}.b-review{background:var(--warn);color:#7a5a00}.b-identified{background:var(--info);color:#285ea8}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+  header{background:linear-gradient(135deg,#17364a,#315f78);color:#fff;padding:38px 20px 32px}
+  .wrap{max-width:1180px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:20px}
+  .team-logo{width:92px;height:92px;object-fit:contain;flex:0 0 auto}
+  .eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin-bottom:8px}
+  h1{margin:0 0 10px;font-size:34px;line-height:1.15}
+  .subtitle{max-width:820px;font-size:17px;line-height:1.55;opacity:.95}
+  main{padding:28px 20px 60px}
+  .notice{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 18px;border-radius:10px;margin-bottom:18px;line-height:1.5}
+  .toolbar{display:grid;grid-template-columns:minmax(260px,2fr) repeat(auto-fit,minmax(170px,1fr));gap:12px;background:var(--card);border:1px solid var(--line);padding:16px;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  label{font-size:12px;font-weight:700;color:var(--muted);display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+  input,select{width:100%;padding:11px 12px;border:1px solid #d0d5dd;border-radius:8px;background:#fff;font-size:14px;color:var(--ink)}
+  .meta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 2px 10px;color:var(--muted);font-size:14px}.meta strong{color:var(--ink)}
+  .table-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}.table-wrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;min-width:760px} th,td{padding:14px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top} th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:#fafafa} td{font-size:14px;line-height:1.4}
+  tr.instrument-row{cursor:pointer} tr.instrument-row:hover{background:#fbfcfd}.name{font-weight:700;color:var(--accent)}.acronym{color:var(--muted);font-weight:500}
+  .badge{display:inline-block;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:700;background:#f1f3f5;color:#495057}.b-retained{background:var(--ok);color:#23613b}.b-review{background:var(--warn);color:#7a5a00}.b-identified{background:var(--info);color:#285ea8}
   .footerbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-top:18px}.btn{appearance:none;border:1px solid #cfd8df;background:#fff;padding:10px 13px;border-radius:8px;font-weight:700;color:var(--accent);cursor:pointer}.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-  dialog{width:min(760px,92vw);border:0;border-radius:14px;padding:0;box-shadow:0 24px 80px rgba(0,0,0,.28)} dialog::backdrop{background:rgba(17,24,39,.48)} .modal-head{padding:22px 24px;background:#f8fafb;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}.modal-body{padding:22px 24px 26px}.instrument-image-wrap{display:none;margin:0 0 22px}.instrument-image-wrap.has-image{display:block}.instrument-image{display:block;width:100%;max-height:430px;object-fit:contain;border:1px solid var(--line);border-radius:12px;background:#fafafa}.close{border:0;background:transparent;font-size:24px;cursor:pointer;color:var(--muted)} .detail-grid{display:grid;grid-template-columns:180px 1fr;gap:10px 18px;font-size:14px;line-height:1.5}.detail-grid dt{font-weight:700;color:var(--muted)}.detail-grid dd{margin:0}.section-title{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:800;margin:22px 0 8px}
+  dialog{width:min(800px,92vw);border:0;border-radius:14px;padding:0;box-shadow:0 24px 80px rgba(0,0,0,.28)} dialog::backdrop{background:rgba(17,24,39,.48)}
+  .modal-head{padding:22px 24px;background:#f8fafb;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}.modal-body{padding:22px 24px 26px}.close{border:0;background:transparent;font-size:24px;cursor:pointer;color:var(--muted)}
+  .instrument-image-wrap{margin:0 0 22px}.instrument-image{display:block;width:100%;max-height:430px;object-fit:contain;border:1px solid var(--line);border-radius:12px;background:#fafafa}
+  .detail-grid{display:grid;grid-template-columns:190px 1fr;gap:10px 18px;font-size:14px;line-height:1.5}.detail-grid dt{font-weight:700;color:var(--muted)}.detail-grid dd{margin:0}
+  .long-section{margin-top:22px}.section-title{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:800;margin:0 0 8px}.long-section div{line-height:1.6}
   .empty{padding:30px;text-align:center;color:var(--muted)}
-  @media(max-width:850px){.toolbar{grid-template-columns:1fr 1fr}.toolbar>div:first-child{grid-column:1/-1}} @media(max-width:560px){h1{font-size:28px}.toolbar{grid-template-columns:1fr}.toolbar>div:first-child{grid-column:auto}.detail-grid{grid-template-columns:1fr}.detail-grid dt{margin-top:10px}}
+  @media(max-width:700px){.brand{align-items:flex-start}.team-logo{width:72px;height:72px}h1{font-size:28px}.meta{align-items:flex-start;flex-direction:column}.detail-grid{grid-template-columns:1fr}.detail-grid dt{margin-top:10px}}
+  @media(max-width:480px){.brand{display:block}.team-logo{margin-bottom:16px}}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
-    <div class="eyebrow">Prototype research resource</div>
-    <h1>aSAH Measurement Instrument Database</h1>
-    <div class="subtitle">Browse candidate measurement instruments relevant to the core outcome domains for aneurysmal subarachnoid hemorrhage. This prototype uses sample data and demonstrates search, filtering, status tracking, and instrument detail views.</div>
+    <div class="brand">
+      <!-- Replace images/team-logo.svg with your team logo. Keeping the same filename means no HTML edit is needed. -->
+      <img class="team-logo" src="images/team-logo.svg" alt="Team logo placeholder" />
+      <div>
+        <div class="eyebrow">Prototype research resource</div>
+        <h1>aSAH Measurement Instrument Database</h1>
+        <div class="subtitle">Browse candidate measurement instruments relevant to the core outcome domains for aneurysmal subarachnoid hemorrhage. This prototype demonstrates a CSV-configured interface, search, filtering, status tracking, images, and instrument detail views.</div>
+      </div>
+    </div>
   </div>
 </header>
 <main>
 <div class="wrap">
   <div class="notice"><strong>About this database.</strong> Inclusion indicates that an instrument has been identified as potentially relevant to an aSAH core outcome domain. Inclusion does not imply endorsement or recommendation unless explicitly stated.</div>
 
-  <div class="toolbar">
-    <div><label for="search">Search instruments</label><input id="search" placeholder="Search name, acronym, construct, or description…" /></div>
-    <div><label for="domain">Core domain</label><select id="domain"><option value="">All domains</option></select></div>
-    <div><label for="type">Instrument type</label><select id="type"><option value="">All types</option></select></div>
-    <div><label for="status">COS status</label><select id="status"><option value="">All statuses</option></select></div>
+  <div class="toolbar" id="toolbar">
+    <div><label for="search">Search instruments</label><input id="search" placeholder="Search instrument information…" /></div>
   </div>
 
-  <div class="meta"><div><strong id="count">0</strong> instruments shown</div><div>Database version: <strong>Prototype 0.1</strong> · Updated August 2026</div></div>
+  <div class="meta"><div><strong id="count">0</strong> instruments shown</div><div>Database version: <strong>Prototype 0.2</strong> · Updated August 2026</div></div>
 
   <div class="table-card"><div class="table-wrap"><table>
-    <thead><tr><th>Instrument</th><th>Core domain</th><th>Subdomain</th><th>Construct</th><th>Type</th><th>COS status</th></tr></thead>
+    <thead><tr id="tableHead"></tr></thead>
     <tbody id="tbody"></tbody>
   </table><div id="empty" class="empty" hidden>No instruments match the selected filters.</div></div></div>
 
@@ -60,20 +76,16 @@
 </main>
 
 <dialog id="dialog">
-  <div class="modal-head"><div><div class="eyebrow" style="color:var(--muted);opacity:1">Instrument record</div><h2 id="mName" style="margin:2px 0 0;font-size:25px"></h2></div><button class="close" id="close">×</button></div>
-  <div class="modal-body">
-    <div id="mImageWrap" class="instrument-image-wrap"><img id="mImage" class="instrument-image" alt="" /></div>
-    <dl class="detail-grid" id="details"></dl>
-    <div class="section-title">Plain-language description</div><div id="mDescription" style="line-height:1.6"></div>
-    <div class="section-title">Provenance / evidence source</div><div id="mSource" style="line-height:1.6"></div>
-  </div>
+  <div class="modal-head"><div><div class="eyebrow" style="color:var(--muted);opacity:1">Instrument record</div><h2 id="mName" style="margin:2px 0 0;font-size:25px"></h2></div><button class="close" id="close" aria-label="Close">×</button></div>
+  <div class="modal-body" id="modalBody"></div>
 </dialog>
 
 <script>
-// The website reads its records from data/instruments.csv.
 let instruments = [];
+let instrumentHeaders = [];
+let fields = [];
+let filterControls = {};
 
-// Small dependency-free CSV parser. Supports quoted commas, quotes, and line breaks.
 function parseCSV(text) {
   const rows = []; let row = [], field = '', quoted = false;
   for (let i = 0; i < text.length; i++) {
@@ -90,42 +102,133 @@ function parseCSV(text) {
     }
   }
   if (field.length || row.length) { row.push(field); rows.push(row); }
-  if (!rows.length) return [];
+  if (!rows.length) return {headers:[], records:[]};
   const headers = rows.shift().map((h, i) => (i === 0 ? h.replace(/^\uFEFF/, '') : h).trim());
-  return rows.filter(r => r.some(v => v.trim() !== '')).map(r =>
+  const records = rows.filter(r => r.some(v => (v || '').trim() !== '')).map(r =>
     Object.fromEntries(headers.map((h, i) => [h, (r[i] ?? '').trim()]))
   );
+  return {headers, records};
 }
 
-const els={search:document.getElementById('search'),domain:document.getElementById('domain'),type:document.getElementById('type'),status:document.getElementById('status'),tbody:document.getElementById('tbody'),count:document.getElementById('count'),empty:document.getElementById('empty')};
-function fillSelect(el,values){[...new Set(values)].sort().forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;el.appendChild(o)})}
+function yes(v){ return String(v || '').trim().toLowerCase() === 'yes'; }
+function escapeHTML(v){ return String(v ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
+function sortedFields(predicate){ return fields.filter(predicate).sort((a,b)=>(Number(a.display_order)||9999)-(Number(b.display_order)||9999)); }
 
-function badge(status){const c=status.startsWith('Retained')?'b-retained':status.startsWith('Under')?'b-review':'b-identified';return `<span class="badge ${c}">${status}</span>`}
-function render(){const q=els.search.value.trim().toLowerCase(); const rows=instruments.filter(x=>(!q||Object.values(x).join(' ').toLowerCase().includes(q))&&(!els.domain.value||x.domain===els.domain.value)&&(!els.type.value||x.type===els.type.value)&&(!els.status.value||x.status===els.status.value));
-  els.count.textContent=rows.length; els.empty.hidden=rows.length!==0; els.tbody.innerHTML=rows.map(x=>`<tr class="instrument-row" data-id="${x.id}"><td><div class="name">${x.name} <span class="acronym">${x.acronym?`(${x.acronym})`:''}</span></div></td><td>${x.domain}</td><td>${x.subdomain}</td><td>${x.construct}</td><td>${x.type}</td><td>${badge(x.status)}</td></tr>`).join('');
-  document.querySelectorAll('.instrument-row').forEach(r=>r.addEventListener('click',()=>openRecord(r.dataset.id)))}
-['input','change'].forEach(ev=>{els.search.addEventListener(ev,render);els.domain.addEventListener(ev,render);els.type.addEventListener(ev,render);els.status.addEventListener(ev,render)});
-document.getElementById('reset').onclick=()=>{els.search.value='';els.domain.value='';els.type.value='';els.status.value='';render()};
+function badge(value){
+  const s=String(value || ''); const low=s.toLowerCase();
+  const c=low.startsWith('retained')?'b-retained':low.startsWith('under')?'b-review':low.startsWith('identified')?'b-identified':'';
+  return `<span class="badge ${c}">${escapeHTML(s)}</span>`;
+}
+
+function formatValue(field, record, context='table'){
+  const value = record[field.field] ?? '';
+  if (field.format === 'badge') return badge(value);
+  if (field.format === 'primary') {
+    const acronym = record.acronym ? ` <span class="acronym">(${escapeHTML(record.acronym)})</span>` : '';
+    return `<span class="name">${escapeHTML(value)}${acronym}</span>`;
+  }
+  return escapeHTML(value) || (context === 'table' ? '—' : 'Not specified');
+}
+
+function uniqueValues(fieldName){
+  return [...new Set(instruments.map(x=>x[fieldName]).filter(v=>String(v || '').trim() !== ''))].sort((a,b)=>a.localeCompare(b));
+}
+
+function buildInterface(){
+  const toolbar=document.getElementById('toolbar');
+  const tableHead=document.getElementById('tableHead');
+
+  sortedFields(f=>yes(f.filter)).forEach(f=>{
+    const wrap=document.createElement('div');
+    const lab=document.createElement('label');
+    const sel=document.createElement('select');
+    const id=`filter-${f.field}`;
+    lab.htmlFor=id; lab.textContent=f.label || f.field;
+    sel.id=id; sel.dataset.field=f.field;
+    const all=document.createElement('option'); all.value=''; all.textContent=`All ${String(f.label || f.field).toLowerCase()}`; sel.appendChild(all);
+    uniqueValues(f.field).forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o)});
+    sel.addEventListener('change',render);
+    wrap.append(lab,sel); toolbar.appendChild(wrap); filterControls[f.field]=sel;
+  });
+
+  sortedFields(f=>yes(f.table)).forEach(f=>{const th=document.createElement('th');th.textContent=f.label || f.field;tableHead.appendChild(th)});
+}
+
+function filteredRows(){
+  const q=document.getElementById('search').value.trim().toLowerCase();
+  const searchFields=sortedFields(f=>yes(f.search));
+  return instruments.filter(record=>{
+    if(q){ const haystack=searchFields.map(f=>record[f.field] || '').join(' ').toLowerCase(); if(!haystack.includes(q)) return false; }
+    for(const [field, control] of Object.entries(filterControls)){ if(control.value && record[field] !== control.value) return false; }
+    return true;
+  });
+}
+
+function render(){
+  const rows=filteredRows(); const tableFields=sortedFields(f=>yes(f.table)); const tbody=document.getElementById('tbody');
+  document.getElementById('count').textContent=rows.length; document.getElementById('empty').hidden=rows.length!==0;
+  tbody.innerHTML=rows.map((record,index)=>{
+    const id=record.id || `row-${index}`;
+    const cells=tableFields.map(f=>`<td>${formatValue(f,record,'table')}</td>`).join('');
+    return `<tr class="instrument-row" data-record-id="${escapeHTML(id)}">${cells}</tr>`;
+  }).join('');
+  tbody.querySelectorAll('.instrument-row').forEach(r=>r.addEventListener('click',()=>openRecord(r.dataset.recordId)));
+}
+
+document.getElementById('search').addEventListener('input',render);
+document.getElementById('reset').onclick=()=>{ document.getElementById('search').value=''; Object.values(filterControls).forEach(c=>c.value=''); render(); };
+
 const dialog=document.getElementById('dialog');
-function openRecord(id){const x=instruments.find(i=>i.id===id);document.getElementById('mName').textContent=`${x.name}${x.acronym?` (${x.acronym})`:''}`;const wrap=document.getElementById('mImageWrap');const img=document.getElementById('mImage');if(x.image){img.src=x.image;img.alt=x.image_alt||`${x.name} illustration`;wrap.classList.add('has-image');}else{img.removeAttribute('src');img.alt='';wrap.classList.remove('has-image');}document.getElementById('details').innerHTML=`<dt>Instrument ID</dt><dd>${x.id}</dd><dt>Core domain</dt><dd>${x.domain}</dd><dt>Subdomain</dt><dd>${x.subdomain}</dd><dt>Construct</dt><dd>${x.construct}</dd><dt>Instrument type</dt><dd>${x.type}</dd><dt>Respondent</dt><dd>${x.respondent}</dd><dt>Administration</dt><dd>${x.administration}</dd><dt>Estimated time</dt><dd>${x.time}</dd><dt>Used in aSAH</dt><dd>${x.used}</dd><dt>COS status</dt><dd>${badge(x.status)}</dd>`;document.getElementById('mDescription').textContent=x.description;document.getElementById('mSource').textContent=x.source;dialog.showModal()}
+function openRecord(id){
+  const record=instruments.find(i=>(i.id || '')===id); if(!record) return;
+  const primary=fields.find(f=>f.format==='primary') || fields.find(f=>f.field==='name');
+  const titleValue=primary ? record[primary.field] : record.name || 'Instrument record';
+  document.getElementById('mName').textContent=`${titleValue || ''}${record.acronym ? ` (${record.acronym})` : ''}`;
+
+  const modal=document.getElementById('modalBody'); modal.innerHTML='';
+  const imageField=fields.find(f=>f.format==='image' && yes(f.popup));
+  if(imageField && record[imageField.field]){
+    const wrap=document.createElement('div'); wrap.className='instrument-image-wrap';
+    const img=document.createElement('img'); img.className='instrument-image'; img.src=record[imageField.field]; img.alt=record.image_alt || `${titleValue || 'Instrument'} illustration`;
+    wrap.appendChild(img); modal.appendChild(wrap);
+  }
+
+  const regular=sortedFields(f=>yes(f.popup) && !['longtext','image','hidden'].includes(f.format) && f.format!=='primary');
+  if(regular.length){
+    const dl=document.createElement('dl'); dl.className='detail-grid';
+    regular.forEach(f=>{const dt=document.createElement('dt');dt.textContent=f.label || f.field;const dd=document.createElement('dd');dd.innerHTML=formatValue(f,record,'popup');dl.append(dt,dd)});
+    modal.appendChild(dl);
+  }
+
+  sortedFields(f=>yes(f.popup) && f.format==='longtext').forEach(f=>{
+    const sec=document.createElement('section');sec.className='long-section';
+    const h=document.createElement('div');h.className='section-title';h.textContent=f.label || f.field;
+    const body=document.createElement('div');body.textContent=record[f.field] || 'Not specified';sec.append(h,body);modal.appendChild(sec);
+  });
+  dialog.showModal();
+}
 document.getElementById('close').onclick=()=>dialog.close(); dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+
 function csvEscape(v){const s=String(v??'');return /[",\n]/.test(s)?`"${s.replaceAll('"','""')}"`:s}
-document.getElementById('download').onclick=()=>{const keys=['id','name','acronym','domain','subdomain','construct','type','status','respondent','administration','time','used','description','source','image','image_alt'];const csv=[keys.join(','),...instruments.map(x=>keys.map(k=>csvEscape(x[k])).join(','))].join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='asah_measurement_instrument_database_prototype.csv';a.click();URL.revokeObjectURL(a.href)};
+document.getElementById('download').onclick=()=>{
+  const csv=[instrumentHeaders.join(','),...instruments.map(x=>instrumentHeaders.map(k=>csvEscape(x[k])).join(','))].join('\n');
+  const a=document.createElement('a');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.href=url;a.download='asah_measurement_instrument_database.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),0);
+};
+
 async function init(){
-  try {
-    const response = await fetch('data/instruments.csv', {cache:'no-store'});
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    instruments = parseCSV(await response.text());
-    fillSelect(els.domain,instruments.map(x=>x.domain));
-    fillSelect(els.type,instruments.map(x=>x.type));
-    fillSelect(els.status,instruments.map(x=>x.status));
-    render();
-  } catch (err) {
-    console.error(err);
-    document.getElementById('count').textContent = '0';
-    const empty = document.getElementById('empty');
-    empty.hidden = false;
-    empty.textContent = 'Could not load data/instruments.csv. This prototype is designed to run from GitHub Pages (or another web server), not directly from a local file.';
+  try{
+    const [instrumentResponse,fieldResponse]=await Promise.all([
+      fetch('data/instruments.csv',{cache:'no-store'}),
+      fetch('data/fields.csv',{cache:'no-store'})
+    ]);
+    if(!instrumentResponse.ok) throw new Error(`Could not load instruments.csv (HTTP ${instrumentResponse.status})`);
+    if(!fieldResponse.ok) throw new Error(`Could not load fields.csv (HTTP ${fieldResponse.status})`);
+    const instrumentData=parseCSV(await instrumentResponse.text()); const fieldData=parseCSV(await fieldResponse.text());
+    instruments=instrumentData.records; instrumentHeaders=instrumentData.headers; fields=fieldData.records;
+    fields=fields.filter(f=>instrumentHeaders.includes(f.field));
+    buildInterface(); render();
+  }catch(err){
+    console.error(err); const empty=document.getElementById('empty');empty.hidden=false;empty.textContent='Could not load the CSV configuration/data files. This prototype is designed to run from GitHub Pages (or another web server), not directly from a local file.';
   }
 }
 init();

@@ -1,0 +1,17 @@
+field,label,table,popup,filter,search,display_order,format
+id,Instrument ID,No,Yes,No,Yes,10,text
+name,Instrument,Yes,Yes,No,Yes,20,primary
+acronym,Acronym,No,Yes,No,Yes,30,text
+domain,Core domain,Yes,Yes,Yes,Yes,40,text
+subdomain,Subdomain,Yes,Yes,Yes,Yes,50,text
+construct,Construct measured,Yes,Yes,No,Yes,60,text
+type,Instrument type,Yes,Yes,Yes,Yes,70,text
+status,COS status,Yes,Yes,Yes,Yes,80,badge
+respondent,Respondent,No,Yes,Yes,Yes,90,text
+administration,Administration,No,Yes,No,Yes,100,text
+time,Estimated time,No,Yes,No,Yes,110,text
+used,Used in aSAH,No,Yes,Yes,Yes,120,text
+description,Plain-language description,No,Yes,No,Yes,130,longtext
+source,Provenance / evidence source,No,Yes,No,Yes,140,longtext
+image,Instrument image,No,Yes,No,No,150,image
+image_alt,Image alternative text,No,No,No,No,160,hidden
