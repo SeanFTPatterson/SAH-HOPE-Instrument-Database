@@ -1,11 +1,13 @@
 field,label,table,popup,filter,search,display_order,format
-id,Instrument ID,No,Yes,No,Yes,10,text
+id,Instrument ID,No,No,No,No,10,hidden
 name,Instrument,Yes,Yes,No,Yes,20,primary
 acronym,Acronym,No,Yes,No,Yes,30,text
 domain,Core domain,Yes,Yes,Yes,Yes,40,text
-subdomain,Subdomain,Yes,Yes,Yes,Yes,50,text
-status,COS status,Yes,Yes,Yes,Yes,80,badge
-description,Description,No,Yes,No,Yes,130,longtext
-source,Provenance / evidence source,No,Yes,No,Yes,140,longtext
+status,COS status,Yes,Yes,Yes,Yes,50,badge
+identified-from,Identified from,No,Yes,No,No,60,text
+description,Description,No,Yes,No,No,70,longtext
+description_reference,Reference,No,Yes,No,No,80,longtext
+plain-language_description,Plain-language description,No,Yes,No,No,90,longtext
+full-version-of-measure,Full version of measure,No,Yes,No,No,100,text
 image,Instrument image,No,Yes,No,No,150,image
 image_alt,Image alternative text,No,No,No,No,160,hidden
