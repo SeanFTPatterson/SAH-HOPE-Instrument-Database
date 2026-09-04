@@ -5,6 +5,7 @@ This version separates both the **instrument data** and the **website field conf
 - `data/instruments.csv` contains the instrument records.
 - `data/fields.csv` controls which fields appear in the main table, pop-up, filters, and search.
 - `images/` contains the replaceable team logo and optional instrument graphics.
+- URL fields can render as clickable links with link text configured entirely in `data/fields.csv`.
 
 ## Folder structure
 
@@ -54,6 +55,7 @@ Each column in `instruments.csv` can be configured in `data/fields.csv`.
 | `search` | `Yes` to include this field in free-text search |
 | `display_order` | Number controlling left-to-right / top-to-bottom order |
 | `format` | How the value is displayed |
+| `link_text` | Text displayed for fields using the `url` format; leave blank for other formats |
 
 Supported `format` values:
 
@@ -62,6 +64,7 @@ Supported `format` values:
 - `badge` — pill-style status display
 - `longtext` — full-width text section in the pop-up
 - `image` — image displayed near the top of the pop-up
+- `url` — safe clickable `http://` or `https://` hyperlink; link text comes from `link_text`
 - `hidden` — stored in the CSV but not directly rendered
 
 ### Example: add Number of items
@@ -70,7 +73,7 @@ Supported `format` values:
 2. Add this row to `fields.csv`:
 
 ```csv
-number_of_items,Number of items,No,Yes,No,Yes,115,text
+number_of_items,Number of items,No,Yes,No,Yes,115,text,
 ```
 
 The new field will appear in the pop-up without any HTML edit.
@@ -80,18 +83,36 @@ The new field will appear in the pop-up without any HTML edit.
 Change the `respondent` row in `fields.csv` from:
 
 ```csv
-respondent,Respondent,No,Yes,Yes,Yes,90,text
+respondent,Respondent,No,Yes,Yes,Yes,90,text,
 ```
 
 to:
 
 ```csv
-respondent,Respondent,Yes,Yes,Yes,Yes,90,text
+respondent,Respondent,Yes,Yes,Yes,Yes,90,text,
 ```
 
 ### Example: remove Subdomain as a filter
 
 Change `filter` from `Yes` to `No` for the `subdomain` row.
+
+## Adding clickable hyperlinks
+
+1. Add a URL column to `data/instruments.csv`, such as `instrument_url`.
+2. Put a complete `https://` or `http://` URL in that column for records that have a resource. Leave the cell blank when no resource is available.
+3. Add a matching row to `data/fields.csv` using `format=url`.
+4. Put the text you want users to see in the `link_text` column.
+
+Example:
+
+```csv
+instrument_url,Instrument website,No,Yes,No,No,125,url,View instrument resource
+source_url,Source publication,No,Yes,No,No,126,url,Read source publication
+```
+
+The link text is controlled by `fields.csv`, so you can change `View instrument resource` to `Visit instrument website`, `Read manual`, `View publication`, or another label without editing the HTML.
+
+Blank URL fields are omitted from the instrument pop-up. Links open in a new browser tab. For safety, the prototype only turns `http://` and `https://` values into clickable links.
 
 ## Adding/removing a CSV column safely
 
@@ -101,19 +122,13 @@ If you remove a column from `instruments.csv`, its `fields.csv` row is automatic
 
 ## Replacing the team logo
 
-The placeholder logo beside the website title is:
+The placeholder logo shown at the **bottom-center of the main page and each instrument pop-up** is:
 
 `images/team-logo.svg`
 
 The easiest approach is to replace that file with your own SVG while keeping the exact same filename (`team-logo.svg`). No HTML change is needed.
 
-If your real logo is PNG/JPG/WebP instead, upload it to `images/` and update this line near the top of `index.html`:
-
-```html
-<img class="team-logo" src="images/team-logo.svg" alt="Team logo placeholder" />
-```
-
-Change the `src` and `alt` text appropriately.
+If your real logo is PNG/JPG/WebP instead, you can either rename/convert it to `team-logo.svg`, or update the two logo paths in `index.html`. Keeping the SVG filename is the simplest no-code replacement.
 
 ## Instrument images
 
@@ -148,3 +163,7 @@ Then open `http://localhost:8000`.
 ## Prototype disclaimer
 
 The included instrument records are sample/demo data for interface testing. They should not be treated as the definitive aSAH instrument inventory or as COS endorsements.
+
+## Prototype hyperlink note
+
+The sample dataset includes demonstration URLs using `example.com` / `example.org` only to show link behavior. Replace them with the appropriate instrument or publication URLs when you populate the real database.
